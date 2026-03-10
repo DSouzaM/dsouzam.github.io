@@ -64,8 +64,8 @@
 \familyname{D'Souza} % Your last name
 
 \email{matt.dsouza@gmail.com}
-\homepage{mattdsouza.com}
-\social[github]{DSouzaM}
+% \homepage{mattdsouza.com}
+\social[github]{github.com/DSouzaM}
 
 
 %----------------------------------------------------------------------------------------
@@ -75,36 +75,41 @@
 
 \makecvtitle % Print the CV title
 \vspace{-2\baselineskip}
-% \section{Skills}
-% \cvlistitem{Experienced with compilers, virtual machines, and programming language implementations}
-% \cvlistitem{Fluent in Java, Python, Scala, C++, OCaml, Ruby}
-% \cvlistitem{Experience in compiler engineering, backend development, and infrastructure}
+\section{Summary}
+\cvlistitem{Systems engineer with a broad background in programming language implementation, developer tooling, databases, and performance optimization.}
+\cvlistitem{Areas: bytecode interpreters, JIT compilers, benchmarking, databases, infrastructure}
+\cvlistitem{Languages \& Technologies: Java, Python, Scala, SQL, JVM, GraalVM/Truffle}
+
 \section{Work Experience}
- \cventry{Mar 2023--}{Senior Researcher}{Oracle Labs}{Zurich, Switzerland (Remote)}{}{}
- \cvlistitem{Leading development of a project to automatically generate optimizing bytecode interpreters from Truffle AST node specifications, thereby reducing warm-up overhead of existing AST interpreters.}
+ \cventry{Mar 2023--}{Principal Researcher}{GraalVM (Oracle Labs)}{Toronto, Canada (Remote)}{}{}
+ \cvlistitem{Co-developer of the Bytecode DSL, a framework to automatically generate production-grade bytecode interpreters optimized for both cold-start and peak performance.}
+ \cvlistitem{Implemented Bytecode DSL features to improve interpreter performance and reduce footprint, like instruction quickening, peephole optimization, constant folding, and lazy metadata reparsing.}
+ \cvlistitem{Migrated the GraalPython interpreter to the Bytecode DSL (now the mode enabled by default).}
+ \cvlistitem{Maintained and extended benchmarking infrastructure and workloads for regression tracking.}
+ \cvlistitem{Improved Native Image user onboarding experience by developing a new metadata tracer that produces precise reflection configuration metadata.}
  \vspace{2mm}
- \cventry{May--Aug 2021}{Research Intern}{Oracle Labs}{Zurich, Switzerland (Remote)}{}{}
- \cvlistitem{Designed an on-stack replacement (OSR) API for Truffle bytecode interpreters}
- \cvlistitem{Integrated OSR API with Truffle's LLVM and JVM bytecode interpreters, reducing cold-start benchmark times by as much as 35\times\ and 20\times\ respectively}
+ \cventry{May--Aug 2021}{Research Intern}{GraalVM (Oracle Labs)}{Toronto, Canada (Remote)}{}{}
+ \cvlistitem{Designed an on-stack replacement (OSR) API for Truffle bytecode interpreters.}
+ \cvlistitem{Integrated OSR API with Truffle's LLVM and JVM bytecode interpreters, reducing cold-start benchmark times by as much as 35\times\ and 20\times\ respectively.}
  \vspace{2mm}
- \cventry{Jun--Aug 2020}{Software Engineering Intern}{Facebook}{Seattle, Washington (Remote)}{}{}
- \cvlistitem{Developed a best-effort translator between Presto and Spark SQL to facilitate pipeline migration}
- \cvlistitem{Fully translated over 3000 memory-intensive Presto pipelines to Spark}
+ \cventry{Jun--Aug 2020}{Software Engineering Intern}{Facebook}{Toronto, Canada (Remote)}{}{}
+ \cvlistitem{Built a best-effort translator between Presto and Spark SQL to facilitate pipeline migration.}
+ \cvlistitem{Fully translated over 3000 memory-intensive production pipelines from Presto to Spark.}
 %  \cvlistitem{Built a dashboard to track progress and prioritize translation efforts}
  \vspace{2mm}
 \cventry{Sep--Dec 2019}{Software Engineering Intern}{Facebook}{New York City, New York}{}{}
-\cvlistitem{Designed a Python API for programmatically decoding and inspecting Android DEX files}
-\cvlistitem{Built a utility to generate semantic and structural diffs between Android APK files}
-\cvlistitem{Profiled and optimized diffing utility, reducing execution time by 90\times\ }
+\cvlistitem{Designed a Python API for programmatically decoding and inspecting Android DEX files.}
+\cvlistitem{Built a utility to generate semantic and structural diffs between Android APK files.}
+\cvlistitem{Profiled and optimized diffing utility, reducing execution time by 90\times.}
 \vspace{2mm}
 \cventry{Jan--Apr 2019}{Software Engineering Intern}{Facebook}{Menlo Park, California}{}{}
-\cvlistitem{Built a more reliable and robust VSCode extension for Pyre, Facebook's Python typechecker}
-\cvlistitem{Reduced Pyre's startup time by as much as 8\times\ using a more efficient build process}
+\cvlistitem{Built a more reliable and robust VSCode extension for Pyre, Facebook's Python typechecker.}
+\cvlistitem{Implemented a more efficient project build process, reducing cold start time by as much as 8\times.}
 %\cvlistitem{Improved support for incremental changes, allowing Pyre to process new \& changed files incrementally}
-\vspace{2mm}
-\cventry{May--Aug 2018}{Software Engineering Intern}{Snowflake Computing}{San Mateo, California}{}{}
-\cvlistitem{Implemented compiler and client support for multi-statement query execution}
-\cvlistitem{Optimized SQL client's handling of array binds to protect the database from degraded performance}
+% \vspace{2mm}
+% \cventry{May--Aug 2018}{Software Engineering Intern}{Snowflake Computing}{San Mateo, California}{}{}
+% \cvlistitem{Implemented compiler and client support for multi-statement query execution}
+% \cvlistitem{Optimized SQL client's handling of array binds to protect the database from degraded performance}
 %\cvlistitem{Created a UDF to automatically parse and infer the file format and schema of CSV files}
 %\cvlistitem{Improved SQL client telemetry to support real-time client monitoring and troubleshooting}
 % \vspace{2mm}
@@ -131,10 +136,11 @@
 
 \section{Education}
 \cventry{2020--2023}{Master of Mathematics (Computer Science)}{University of Waterloo}{}{}{}
-\cvlistitem{Thesis: Efficient Implementation of Parametric Polymorphism using Reified Types}
+\cvlistitem{Thesis: Efficient Implementation of Parametric Polymorphism using Reified Types (extending a Scala interpreter with generic type information to enable better JIT compiler optimizations)}
 \cventry{2015--2020}{Bachelor of Software Engineering}{University of Waterloo}{}{}{}
+\cvlistitem{Sandford Fleming Award for Academic Excellence}
 \cvlistitem{Undergraduate Research Assistant (2019): Using static analysis to optimize TrueType font bytecode}
-\cvlistitem{Undergraduate Research Assistant (2016): Bazel and Java 9 integration for the \href{https://checkerframework.org/}{Checker Framework}}
+% \cvlistitem{Undergraduate Research Assistant (2016): Bazel and Java 9 integration for the \href{https://checkerframework.org/}{Checker Framework}}
 
 \nocite{*}
 \bibliographystyle{unsrt}
@@ -150,10 +156,10 @@
 %----------------------------------------------------------------------------------------
 %\bigskip
 
-\section{Interests}
+% \section{Interests}
 
-\cvlistitem{Court \& beach volleyball, long-distance running}
-\cvlistitem{Acoustic guitar, keyboard}
-\cvlistitem{Crosswords}
+% \cvlistitem{Court \& beach volleyball, long-distance running}
+% \cvlistitem{Acoustic guitar, keyboard}
+% \cvlistitem{Crosswords}
 
 \end{document}
